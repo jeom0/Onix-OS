@@ -1,0 +1,93 @@
+
+  <!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Onix OS</title>
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="icon" type="icon/favicon" href="png/onix.png">
+
+<!-- scrib Reloj -->
+	<script language="JavaScript">
+function mueveReloj(){
+    momentoActual = new Date()
+    hora = momentoActual.getHours()
+    minuto = momentoActual.getMinutes()
+    segundo = momentoActual.getSeconds()
+
+    str_segundo = new String (segundo)
+    if (str_segundo.length == 1)
+       segundo = "0" + segundo
+
+    str_minuto = new String (minuto)
+    if (str_minuto.length == 1)
+       minuto = "0" + minuto
+
+    str_hora = new String (hora)
+    if (str_hora.length == 1)
+       hora = "0" + hora
+
+    horaImprimible = hora + " : " + minuto + " : " + segundo
+
+    document.form_reloj.reloj.value = horaImprimible
+
+    setTimeout("mueveReloj()",1000)
+}
+</script>
+<!--Fin script-->
+
+</head>
+<body onload="mueveReloj()">
+	<div id="container">
+		<a href="#">
+			<div class="left">
+				
+					<img class="inicio" src="png/onix.png">
+				</ul>
+			</div>
+		</a>
+		<div class="center">
+				<ul>
+					<li>
+						<a href="">
+							<form name="form_reloj">
+								<input type="text" name="reloj" size="10" style="
+								background-color : #333; color : White; font-family : Verdana, Arial, Helvetica; font-size : 10pt; text-align : center; border: none;" onfocus="window.document.form_reloj.reloj.blur()">
+							</form>
+
+					</a></li>
+				</ul>
+		</div>	
+
+		<div class="right">
+				<ul>
+					<li><a href="#"><img class="icono" src="png/047-message.png";></a></li>
+					<li><a href="#"><img class="icono" src="png/email.png";></a></li>
+					<li><a href="#"><img class="icono" src="png/048-notification.png";></a></li>
+					<li><a href="#"><img class="icono" src="png/018-power.png";></a></li>
+				</ul>  
+		</div>	
+	</div>
+
+	<div id="principal">
+	
+		
+	</div>
+	<div class="barra_contenedora">	
+		<div class="barra">
+			<ul>
+					<li><a href="#"><img src="png/047-message.png";></a></li>
+					<li><a href="#"><img src="png/047-message.png";></a></li>
+					<li><a href="#"><img src="png/multimedia-audio-player.svg";></a></li>
+					<li><a href="#"><img src="png/multimedia-video-player.svg";></a></li>
+					<li><a href="#"><img src="png/047-message.png";></a></li>
+					<li><a href="#"><img src="png/utilities-terminal.svg";></a></li>
+					<li><a href="#"><img src="png/048-notification.png";></a></li>
+					<li><a href="#"><img src="png/018-power.png";></a></li>
+				</ul>
+	</div>
+		</div>	
+</body>
+</html>
